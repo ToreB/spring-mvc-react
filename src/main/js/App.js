@@ -9,7 +9,7 @@ class App extends React.Component {
 
         for (var key in buildProperties) {
             if (buildProperties.hasOwnProperty(key)) {
-                properties.push(<li key={key}>{buildProperties[key]}</li>);
+                properties.push(<li key={key}>{key}: {buildProperties[key]}</li>);
             }
         }
         return (
