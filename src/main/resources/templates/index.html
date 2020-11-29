@@ -14,9 +14,12 @@
 <script data-th-src="@{built/index.bundle.js}"></script>
 <script data-th-inline="javascript">
     // Integrates Thymeleaf and MVC model properties with React through React properties.
-    lib.initializeApp({
-        username: /*[[${username}]]*/ 'default',
-        buildProperties: /*[[${buildProperties}]]*/ {}
+    lib.initializeApp('app', {
+        username: /*[[${username}]]*/ "default",
+        buildProperties: /*[[${buildProperties}]]*/ {},
+        links: {
+            logout: /*[[@{/logout}]]*/ "#"
+        }
     });
 </script>
 </body>

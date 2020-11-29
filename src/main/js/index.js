@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 
-export function initializeApp(props) {
+export function initializeApp(elementId, props) {
     ReactDOM.render(
         <App {...props} />,
-        document.getElementById('app')
+        document.getElementById(elementId)
     );
 }
