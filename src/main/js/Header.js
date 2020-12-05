@@ -14,8 +14,8 @@ const useStyles = makeStyles({
     title: {
         flexGrow: 1,
     },
-    username: {
-        paddingRight: 10
+    accountIcon: {
+        marginRight: 10
     }
 });
 
@@ -46,8 +46,8 @@ function Header({ appName, username, logoutLink }) {
 
                     <div>
                         <IconButton color="inherit" onClick={handleMenu}>
-                            <Typography className={classes.username} variant="button">{username}</Typography>
-                            <AccountCircle />
+                            <AccountCircle className={classes.accountIcon} />
+                            <Typography variant="button">{username}</Typography>
                         </IconButton>
                         <Menu keepMounted
                               anchorEl={anchorEl}
