@@ -16,9 +16,12 @@ function BuildProperties({ buildProperties }) {
     }
 
     return (
-        <ul>
-            {properties}
-        </ul>
+        <>
+            <h2>Build properties</h2>
+            <ul>
+                {properties}
+            </ul>
+        </>
     )
 }
 
