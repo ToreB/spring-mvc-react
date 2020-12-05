@@ -15,7 +15,7 @@ const useStyles = makeStyles({
         flexGrow: 1,
     },
     accountIcon: {
-        marginRight: 10
+        marginRight: 5
     }
 });
 
