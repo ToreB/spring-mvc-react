@@ -1,11 +1,17 @@
+import PropTypes from 'prop-types'
 import React from 'react';
+import { BoldKeyKeyValueTextElement } from "./KeyValueTextElement";
 
 function BuildProperties({ buildProperties }) {
 
-    let properties = [];
+    const properties = [];
     for (let key in buildProperties) {
         if (buildProperties.hasOwnProperty(key)) {
-            properties.push(<li key={key}>{key}: {buildProperties[key]}</li>);
+            properties.push(
+                <li key={key}>
+                    <BoldKeyKeyValueTextElement keyName={key} value={buildProperties[key]} />
+                </li>
+            );
         }
     }
 
@@ -14,6 +20,16 @@ function BuildProperties({ buildProperties }) {
             {properties}
         </ul>
     )
+}
+
+BuildProperties.propTypes = {
+    buildProperties: PropTypes.shape({
+        name: PropTypes.string,
+        version: PropTypes.string,
+        time: PropTypes.string,
+        group: PropTypes.string,
+        artifact: PropTypes.string
+    })
 }
 
 export default BuildProperties;
